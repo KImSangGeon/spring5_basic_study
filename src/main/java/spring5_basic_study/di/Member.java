@@ -14,6 +14,7 @@ public class Member {
 		
 		if(!password.equals(oldPassword))
 			throw new WrongIdPasswordException();
+		//else 생략
 		this.password = newPassword;
 	}
 	
@@ -57,7 +58,7 @@ public class Member {
 
 	@Override
 	public String toString() {
-		return String.format("Member [id=%s, email=%s, password=%s, name=%s, registerDateTime=%s]", id, email, password,
-				name, registerDateTime);
+		return String.format("id=%s,  name=%s, password=%s,  registerDateTime=%s",
+				id,  name, password,	 registerDateTime);
 	}	
 }

@@ -10,7 +10,7 @@ public class SelectListService {
 		this.memberdao = memberdao;
 	}
 	
-	public Map<String, Member> selectAll(){
-		return memberdao.selectAll();
-		}	
+//	public Map<String, Member> selectAll(){
+//		return memberdao.selectAll();
+//		}	
 }

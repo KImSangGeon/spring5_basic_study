@@ -18,6 +18,8 @@ public class MemberRegisterService {
 			Member newMember = new Member(
 					req.getEmail(), req.getPassword(), 
 					req.getName(), LocalDateTime.now());
+			
+			//dao 두개면 트렌젝션 써야되는데 셀렉트 사용 update or insert는 안써도 됨.
 			memberDao.insert(newMember);
 			return newMember.getId();
 		}

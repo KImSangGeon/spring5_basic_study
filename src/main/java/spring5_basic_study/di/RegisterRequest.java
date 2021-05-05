@@ -6,6 +6,11 @@ public class RegisterRequest {
 		private String password;
 		private String confirmPassword;
 		private String name;
+		
+		public boolean isPasswordEqualToConfirmPassword() {
+			return password.equals(confirmPassword);
+		}
+		
 		public String getEmail() {
 			return email;
 		}
@@ -31,9 +36,7 @@ public class RegisterRequest {
 			this.name = name;
 		}
 		
-		public boolean isPasswordEqualToConfirmPassword() {
-			return password.equals(confirmPassword);
-		}
+	
 		
 		
 }

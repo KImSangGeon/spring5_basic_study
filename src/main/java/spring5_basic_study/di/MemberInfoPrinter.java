@@ -1,8 +1,11 @@
 package spring5_basic_study.di;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class MemberInfoPrinter {
-	
+	@Autowired
 	private MemberDao memberDao;
+	@Autowired
 	private MemberPrinter printer;
 	
 	public void printMemberInfo(String email) {
@@ -11,17 +14,15 @@ public class MemberInfoPrinter {
 			 throw new MemberNotFoundException();	
 		}
 		printer.print(member);
-		System.out.println();
-		
-		
+		System.out.println();		
 	}
 
-	public void setMemberDao(MemberDao memberDao) {
-		this.memberDao = memberDao;
-	}
-
-	public void setPrinter(MemberPrinter printer) {
-		this.printer = printer;
-	}
+//	public void setMemberDao(MemberDao memberDao) {
+//		this.memberDao = memberDao;
+//	}
+//
+//	public void setPrinter(MemberPrinter printer) {
+//		this.printer = printer;
+//	}
 
 }

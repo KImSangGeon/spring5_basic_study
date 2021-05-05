@@ -2,15 +2,18 @@ package spring5_basic_study.di;
 
 import java.util.Collection;
 
-public class MemberListPrinter {
+import org.springframework.beans.factory.annotation.Autowired;
 
+public class MemberListPrinter {
+	@Autowired
 	private MemberDao memberDao;
+	@Autowired
 	private MemberPrinter printer;
 	
-	public MemberListPrinter(MemberDao memberDao, MemberPrinter printer) {
-		this.memberDao = memberDao;
-		this.printer = printer;
-	}
+//	public MemberListPrinter(MemberDao memberDao, MemberPrinter printer) {
+//		this.memberDao = memberDao;
+//		this.printer = printer;
+//	}
 	
 	public void printAll() {
 		Collection<Member> members = memberDao.selectAll();
